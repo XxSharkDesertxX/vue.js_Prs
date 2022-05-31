@@ -3,29 +3,22 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-main{
-    height: 100vh;
-    display: flex; justify-content: center; align-items: center;
-    background: linear-gradient(to left top , rgb(65, 65, 235) , rgb(230, 51, 51));
-}
-#app{
-    width: 40%;
-    height: 30%;
-    border-radius: .5rem;
-    overflow: auto;
-    background-color: rgba(255, 255, 255,.6);
-    display: flex; justify-content: center ; align-items: center; flex-direction: column;
-}
-#app h1{
-    font-size: 1.9rem;
-    margin-bottom: .7rem;
-    font-weight: normal;
-    letter-spacing: .5rem;
+header{
+    height: auto;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-bottom: 3px solid gray;
 }
 
-#app input{
-    outline: none;
-    border: none;
-    padding: .5rem;
-    font-size: 1rem;
+header textarea{
+    margin: 2rem 0;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+button{
+    outline: none; border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
 }
