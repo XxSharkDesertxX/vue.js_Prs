@@ -18,8 +18,8 @@
 
         <textarea cols="50" rows="5" v-model="mes"></textarea>
 
-        <button type="button" v-show="mes">
-            Click me pleace
+        <button type="button" v-show="mes" @click="handel()">
+            Click me pleace - Add {{cont}}
         </button>
     </header>
 
