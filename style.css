@@ -9,16 +9,3 @@ header{
     margin-top: 5rem;
     border-bottom: 3px solid gray;
 }
-
-header textarea{
-    margin: 2rem 0;
-    padding: 1rem;
-    font-size: 1.3rem;
-}
-
-button{
-    outline: none; border: none;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    margin-top: 2rem;
-}

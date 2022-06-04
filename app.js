@@ -1,13 +1,19 @@
+Vue.component('counter',{
+    template: "#counter-template",
+
+    props:["subject"],
+    
+    data:function () {
+        return {count : 0};
+    }
+});
+
 new Vue({
-    el: "#app",
-    data: {
-        mes: "",
-        cont:0
+    el:"#app",
+
+    data:function () {
+      return {count : 0};  
     },
-    methods: {
-        handel: function () {
-            alert("Hello ");
-            this.cont += 1;
-        },
-    },
+
+    props:['subject'],
 });

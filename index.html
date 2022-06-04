@@ -10,17 +10,24 @@
 <body>
     
     <header id="app">
-        <h1>check conditon in Vue js :) </h1>
 
-        <h3 style="color: red; margin-top: 2rem;" v-show="!mes">
-            dont empety box ...
-        </h3>
+        <counter subject="Like">
+            
+        </counter>
 
-        <textarea cols="50" rows="5" v-model="mes"></textarea>
+        <counter subject="dislike">
+            
+        </counter>
 
-        <button type="button" v-show="mes" @click="handel()">
-            Click me pleace - Add {{cont}}
-        </button>
+
+        <template id="counter-template" class="names">
+            <div>
+
+                <h1>{{subject}}  </h1>
+            <button @click="count += 1" >{{ count }}</button>
+
+            </div>
+        </template>
     </header>
 
 
