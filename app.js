@@ -1,38 +1,13 @@
 new Vue({
     el:"#app",
-
-   data:{
-       points:100,
-       Fname:"Ali",
-       Lname:"Rahjo",
-       FullNmae:"Ali Rahjo"
-   },
-
-
-   computed:{  // computed save file is cache
-    skill:function () {
-        if (this.points <= 100) {
-            return "mobtadi";
-        }else{
-            return "pisrafte";
-        }
-    },
-
-    FullNmae:function () {
-        return this.Fname + " " + this.Lname;
+    data:{
+        mes:"salam",
+        meshtml:"</a>Salam<a>",
+        mesif:true,
+        meselse:true,
+        numbers:[1,2,3,4,5,6,7],
+        url:"https://www.google.com",
+        title:"گوگل",
+        newTitle:new Date(),
     }
-},
-
-watch:{
-    Fname:function (Fname) {
-        this.FullNmae = Fname + " " + this.Lname;
-    },
-    Lname:function (Lname) {
-        this.FullNmae= this.Fname + " "+ Lname;
-    }
-}
-
-
-
-
 });

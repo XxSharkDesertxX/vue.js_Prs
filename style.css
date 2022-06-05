@@ -9,3 +9,13 @@ header{
     margin-top: 5rem;
     border-bottom: 3px solid gray;
 }
+
+.data{
+    color: blue;
+    border: 2px solid gray;
+    padding: 1rem .5rem;
+}
+
+[v-cloak]{
+    display: none;
+}
