@@ -10,50 +10,25 @@
 <body>
     
    
-    <div id="app"> 
-        
-        <h1>{{ mes }}</h1>
-
-        <h1 v-text="mes"></h1>
-
-        <h1 v-html="meshtml"></h1>
-
-        <h1 v-if="mesif">True</h1>
-
-        <h1 v-else="mesif">False</h1>
-
-        <h1 v-else-if="mesif"></h1>
-
-        <h1 v-cloak>{{mes}}</h1>
-
+    <div id="app">
         <ul>
-            <li v-for="number in numbers" v-text="number"></li>
+            <li v-for="plan in plans">
+                <plan :plan="plan" @activate="setActive(plan)" :active="activated"></plan>
+            </li>
         </ul>
-
-        <input type="text" :placeholder="mes">
-
-        <a v-bind:href="url" :title="newTitle">
-            {{url}}
-        </a>
-
-        <!-- 
-            v-text
-            v-html
-            v-if
-            v-else
-            v-else-if
-            v-for
-            v-on == @
-            v-bind == :
-            v-model
-            v-pre == dont {{}} change in Vue
-            v-once == all change in Vue - one time renders
-            v-cloak == in style.css code
-
-
-         -->
     </div>
 
+    <template id="plan-template">
+        <div>
+            {{ plan.name }} : ${{plan.price}}
+            <button @click="activate" v-if="!isactive">
+                    {{ isUpgrade ? 'Upgrade' : 'Downgrade' }}
+            </button>
+            <button  v-else>
+                Disable
+        </button>
+        </div>
+    </template>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
