@@ -19,3 +19,16 @@ header{
 [v-cloak]{
     display: none;
 }
+
+
+.completed{
+    text-decoration: line-through;
+}
+
+li{
+    cursor: pointer;
+}
+.dontCompleted{
+    background-color: gray;
+    color: #fff;
+}
